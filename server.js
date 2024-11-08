@@ -66,7 +66,8 @@ app.get('/api/coins/:coin', async (req, res) => {
     res.status(500).json({ error: 'Error fetching data from the public API' });
   }
 });
+const PORT = process.env.PORT || 3000;
 
-app.listen(3000, () => {
-  console.log('server is listening on the port 3000');
+app.listen(PORT, () => {
+  console.log(`server is listening on the port ${process.env.PORT}`);
 });
